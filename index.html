@@ -1,0 +1,581 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        
+        <!--should be included in every website-->
+        <meta charset="utf-8">
+        <!--something related to telling the device how to deal with scaling: not sure yet-->
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <!--this is the description that users will see under the search result link of the website-->
+        <meta name="description" content="Omnifood is a premium food delivery service with the mission to bring affordable and healthy meals to as amny people as possible.">
+        
+        <!--Not my own created files-->
+        <link rel="stylesheet" type="text/css" href="vendors/css/normalize.css">
+        <!--This file includes boilerplate for designing responsive websites-->
+        <link rel="stylesheet" type="text/css" href="vendors/css/grid.css">
+        
+        <!--this is a required link to make the animations work in the script.js file-->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.0.0/animate.min.css" />
+
+        
+        <!--my own created files-->
+        <link rel="stylesheet" type="text/css" href="resources/css/style.css">
+        <link rel="stylesheet" type="text/css" href="resources/css/queries.css">
+        
+        <!--css files for the ionicons which is needed to display them-->
+        <link rel="stylesheet" type="text/css" href="vendors/css/ionicons.min.css">
+        
+        <!--for linking the fonts from google to the website -->
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;1,300&display=swap" rel="stylesheet">
+        
+        <title>Omnifood</title>
+        
+        <!--favicons-->
+        <link rel="apple-touch-icon" sizes="180x180" href="/resources/favicons/apple-touch-icon.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="/resources/favicons/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="/resources/favicons/favicon-16x16.png">
+        <link rel="manifest" href="/resources/favicons/site.webmanifest">
+        <link rel="mask-icon" href="/resources/favicons/safari-pinned-tab.svg" color="#5bbad5">
+        <link rel="shortcut icon" href="/resources/favicons/favicon.ico">
+        <meta name="msapplication-TileColor" content="#da532c">
+        <meta name="msapplication-config" content="/resources/favicons/browserconfig.xml">
+        <meta name="theme-color" content="#ffffff">
+    
+    </head>
+    <body>
+        
+        <!--HEADER SECTION***************************************************************************************************************************************************-->
+        
+        <!--The header of the page-->
+        <header>
+            <!--the nav tag is where the navigations elements will go-->
+            <nav>
+                <div class="row">
+                    <!--the logo for the navigation-->
+                    <img src="resources/img/logo-white.png" alt="Omnifood logo" class="logo">
+                    <img src="resources/img/logo.png" alt="Omnifood logo" class="logo-black">
+                    <!--navigation is done using an unordered list. the ul tag is an unordered list-->
+                    <ul class="main-nav js--main-nav">
+                        <!--li tag is a list element. In the navigation, each list item will be a link-->
+                        <!--The href value will be the same as the id to which the button will scroll to-->
+                        <li><a href="#features">Food delivery</a></li>
+                        <li><a href="#works">How it works</a></li>
+                        <li><a href="#cities">our cities</a></li>
+                        <li><a href="#plans">Sign up</a></li>
+                    </ul>
+                    
+                    <a class="mobile-nav-icon js--nav-icon"><i class="ion-navicon"></i></a>
+                    
+                </div>
+            </nav>
+            <!--The text that will go over the hero image, which is the large background image-->
+            <div class="hero-text-box">
+                <h1>Goodbye junk food.<br>Hello super healthy meals.</h1>
+                <!--to make buttons, a link is created, which is then styled. This button will take us down to the sign up section-->
+                <!--the js class names are for JQuery-->
+                <a class="btn btn-full js--scroll-to-plans" href="#">I’m hungry</a>
+                <a class="btn btn-ghost js--scroll-to-start" href="#">Show me more</a>
+            </div>
+        </header>
+        
+        <!--FEATURES SECTION***************************************************************************************************************************************************-->
+        
+        <!--section for the features. the js is for specifying the javascript class for this element which is used in jquery-->
+        <section class="section-features js--section-features" id="features">
+            <!--the title of the heading-->
+            <div class="row">
+                <!--each webpage should only have one main heading (h1) so this heading/title will be an h2 element-->
+                <!--the &mdash; is a large seperator that looks like a regular dash, but bigger. It is a special character so it is implemented like this-->
+                <h2>Get food fast &mdash; not fast food</h2>
+                <!--the subtitle is put in a paragraph element-->
+                <p class="long-copy">
+                    Hello, we’re Omnifood, your new premium food delivery service. We know you’re always busy. No time for cooking. So let us take care of that, we’re really good at it, we promise!
+                </p>
+            </div>
+            
+            <!--since these columns will need to be responsive, the css that controls their height, width, and orientation will come from the grid.css file-->
+            
+            <!--the js is for the first way point. This is for animation. The whole row will be animated-->
+            <div class="row js--wp-1">
+                
+                <!--the col class is already defined in grid.css, and the span-1-of-4 defines how many columns there will be, and the styling is already defined for that is grid.css file-->
+                <div class="col span-1-of-4 box">
+                    <!--adding an icon from ionicons: the class name is the name of the icon in the ionicons database-->
+                    <i class="ion-ios-infinite-outline icon-big"></i>
+                    <h3>Up to 365 days/year</h3>
+                    <p>
+                        Never cook again! We really mean that. Our subscription plans include up to 365 days/year coverage. You can also choose to order more flexibly if that's your style.
+                    </p>
+                </div>
+                
+                <!--the col class is already defined in grid.css, and the span-1-of-4 defines how many columns there will be, and the styling is already defined for that is grid.css file-->
+                <div class="col span-1-of-4 box">
+                    <!--adding an icon from ionicons: the class name is the name of the icon in the ionicons database-->
+                    <i class="ion-ios-stopwatch-outline icon-big"></i>
+                    <h3>Ready in 20 minutes</h3>
+                    <p>
+                        You're only twenty minutes away from your delicious and super healthy meals delivered right to your home. We work with the best chefs in each town to ensure that you're 100% happy.
+                    </p>
+                </div>
+                
+                <!--the col class is already defined in grid.css, and the span-1-of-4 defines how many columns there will be, and the styling is already defined for that is grid.css file-->
+                <div class="col span-1-of-4 box">
+                    <!--adding an icon from ionicons: the class name is the name of the icon in the ionicons database-->
+                    <i class="ion-ios-nutrition-outline icon-big"></i>
+                    <h3>100% organic</h3>
+                    <p>
+                        All our vegetables are fresh, organic and local. Animals are raised without added hormones or antibiotics. Good for your health, the environment, and it also tastes better!
+                    </p>
+                </div>
+                
+                <!--the col class is already defined in grid.css, and the span-1-of-4 defines how many columns there will be, and the styling is already defined for that is grid.css file-->
+                <div class="col span-1-of-4 box">
+                    <!--adding an icon from ionicons: the class name is the name of the icon in the ionicons database-->
+                    <i class="ion-ios-cart-outline icon-big"></i>
+                    <h3>Order anything</h3>
+                    <p>
+                        We don't limit your creativity, which means you can order whatever you feel like. You can also choose from our menu containing over 100 delicious meals. It's up to you!
+                    </p>
+                </div>
+            </div>
+        </section>
+        
+        <!--MEALS IMAGES SECTION***************************************************************************************************************************************************-->
+        
+        <!--this section is for displaying photography of the meals-->
+        <section class="section-meals">
+            <!--we want two columns with four images in each column of the grid. Since we want the images to take up the whole width, we will not use the row class-->
+            <!--two unordered lists will be used to create the grid-->
+            
+            <!--this is the first row of images-->
+            <ul class="meals-showcase clearfix">
+                <li>
+                    <!--a figure can hold an image or a caption for an image-->
+                    <figure class="meal-photo">
+                        <img src="resources/img/1.jpg" alt="Korean bibimbap with egg and vegetables">
+                    </figure>
+                </li>
+                 <li>
+                    <!--a figure can hold an image or a caption for an image-->
+                    <figure class="meal-photo">
+                        <img src="resources/img/2.jpg" alt="Simple italian pizza with cherry tomatoes">
+                    </figure>
+                </li>
+                 <li>
+                    <!--a figure can hold an image or a caption for an image-->
+                    <figure class="meal-photo">
+                        <img src="resources/img/3.jpg" alt="Chicken breast steak with vegetables">
+                    </figure>
+                </li>
+                 <li>
+                    <!--a figure can hold an image or a caption for an image-->
+                    <figure class="meal-photo">
+                        <img src="resources/img/4.jpg" alt="Autumn pumpkin soup">
+                    </figure>
+                </li>
+            </ul>
+            
+            <!--this is the second row of images-->
+            <ul class="meals-showcase clearfix">
+                <li>
+                    <!--a figure can hold an image or a caption for an image-->
+                    <figure class="meal-photo">
+                        <img src="resources/img/5.jpg" alt="Paleo beef steak with vegetables">
+                    </figure>
+                </li>
+                 <li>
+                    <!--a figure can hold an image or a caption for an image-->
+                    <figure class="meal-photo">
+                        <img src="resources/img/6.jpg" alt="Healthy baguette with egg and vegetables">
+                    </figure>
+                </li>
+                 <li>
+                    <!--a figure can hold an image or a caption for an image-->
+                    <figure class="meal-photo">
+                        <img src="resources/img/7.jpg" alt="Burger with cheddar and bacon">
+                    </figure>
+                </li>
+                 <li>
+                    <!--a figure can hold an image or a caption for an image-->
+                    <figure class="meal-photo">
+                        <img src="resources/img/8.jpg" alt="Granola with cherries and strawberries">
+                    </figure>
+                </li>
+            </ul>
+        </section>
+        
+        <!--STEPS SECTION***************************************************************************************************************************************************-->
+        
+        <!--this section will outline the steps of using the service to the user-->
+        <section class="section-steps" id="works">
+            <div class="row">
+                <!--title of the section-->
+                <h2>How it works &mdash; Simple as 1, 2, 3</h2>
+            </div>
+            <div class="row">
+                <!--define how many columns there will be by using the span styling which is located in the grid.css, and is used to make the webpage responsive-->
+                <div class="col span-1-of-2 steps-box js--wp-2">
+                    <img src="resources/img/app-iPhone.png" alt="Omnifood app on iPhone" class="app-screen">
+                </div>
+                <div class="col span-1-of-2 steps-box">
+                    <!--each div container here holds the step number, and the step information. The number is inside a sub div because the div border will be turned into a circle-->
+                    <div class="works-step">
+                        <div>1</div>
+                        <p>Choose the subscription plan that best fits your needs and sign up today.</p>
+                    </div>
+                    <div class="works-step">
+                        <div>2</div>
+                        <p>Order your delicious meal using our mobile app or website. Or you can even call us!</p>
+                    </div>
+                    <div class="works-step">
+                        <div>3</div>
+                        <p>Enjoy your meal after less than 20 minutes. See you the next time!</p>
+                    </div>
+                    
+                    <!--the download links are actually images that are truned into buttons-->
+                    <a href="#" class="btn-app"><img src="resources/img/download-app.svg" alt="app store button"></a>
+                    <a href="#" class="btn-app"><img src="resources/img/download-app-android.png" alt="google play store button"></a>
+                    
+                </div>
+            </div>
+        </section>
+        
+        <!--CITIES SECTION***************************************************************************************************************************************************-->
+        
+        <section class="section-cities" id="cities">
+             <div class="row">
+                <!--title of the section-->
+                <h2>We're currently in these cities</h2>
+            </div>
+            <div class="row js--wp-3">
+                <!--one of the city information areas*****************************-->
+                <div class="col span-1-of-4 box">
+                    <img src="resources/img/lisbon-3.jpg" alt="Lisbon">
+                    <h3>Lisbon</h3>
+                    <div class="city-feature">
+                        <i class="ion-ios-person icon-small"></i>
+                        1600+ happy eaters
+                    </div>
+                    <div class="city-feature">
+                        <i class="ion-ios-star icon-small"></i>
+                        60+ top chefs
+                    </div>
+                    <div class="city-feature">
+                        <i class="ion-social-twitter icon-small"></i>
+                        <a href="#">@omnifood_lx</a>
+                    </div>
+                </div>
+                <!--one of the city information areas*****************************-->
+                <div class="col span-1-of-4 box">
+                    <img src="resources/img/san-francisco.jpg" alt="Lisbon">
+                    <h3>San Francisco</h3>
+                    <div class="city-feature">
+                        <i class="ion-ios-person icon-small"></i>
+                        3700+ happy eaters
+                    </div>
+                    <div class="city-feature">
+                        <i class="ion-ios-star icon-small"></i>
+                        160+ top chefs
+                    </div>
+                    <div class="city-feature">
+                        <i class="ion-social-twitter icon-small"></i>
+                        <a href="#">@omnifood_sf</a>
+
+                    </div>
+                </div>
+                <!--one of the city information areas*****************************-->
+                <div class="col span-1-of-4 box">
+                    <img src="resources/img/berlin.jpg" alt="Lisbon">
+                    <h3>Berlin</h3>
+                    <div class="city-feature">
+                        <i class="ion-ios-person icon-small"></i>
+                        2300+ happy eaters
+                    </div>
+                    <div class="city-feature">
+                        <i class="ion-ios-star icon-small"></i>
+                        110+ top chefs
+                    </div>
+                    <div class="city-feature">
+                        <i class="ion-social-twitter icon-small"></i>
+                        <a href="#">@omnifood_berlin</a>
+                    </div>
+                </div>
+                <!--one of the city information areas*****************************-->
+                <div class="col span-1-of-4 box">
+                    <img src="resources/img/london.jpg" alt="Lisbon">
+                    <h3>London</h3>
+                    <div class="city-feature">
+                        <i class="ion-ios-person icon-small icon-small"></i>
+                        1200+ happy eaters
+                    </div>
+                    <div class="city-feature">
+                        <i class="ion-ios-star icon-small"></i>
+                        50+ top chefs
+                    </div>
+                    <div class="city-feature">
+                        <i class="ion-social-twitter icon-small"></i>
+                        <a href="#">@omnifood_london</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!--TESTIMONIALS SECTION***************************************************************************************************************************************************-->
+        
+        <section class="section-testimonials">
+            <!--one row for the title-->
+            <div class="row">
+                <h2>Our customers can't live without us</h2>
+            </div>
+            <!--one row for the customer testimonials-->
+            <div class="row">
+                <!--*********************first testimonial************************-->
+                <div class="col span-1-of-3">
+                    <!--this element is designed to complement quotes-->
+                    <blockquote>
+                        Omnifood is just awesome! I just launched a startup which leaves me with no time for cooking, so Omnifood is a life-saver. Now that I got used to it, I couldn't live without my daily meals!
+                    </blockquote>
+                    <!--this element is for citing the quoter-->
+                    <cite>
+                        <!--image of the quoter-->
+                        <img src="resources/img/customer-1.jpg" alt="Alberto Duncan">
+                        Alberto Duncan
+                    </cite>
+                </div>
+                <!--*********************second testimonial************************-->
+                <div class="col span-1-of-3">
+                    <!--this element is designed to complement quotes-->
+                    <blockquote>
+                        Inexpensive, healthy and great-tasting meals, delivered right to my home. We have lots of food delivery here in Lisbon, but no one comes even close to Omifood. Me and my family are so in love!
+                    </blockquote>
+                    <!--this element is for citing the quoter-->
+                    <cite>
+                        <!--image of the quoter-->
+                        <img src="resources/img/customer-2.jpg" alt="Alberto Duncan">
+                        Joana Silva
+                    </cite>
+                </div>
+                <!--*********************third testimonial************************-->
+                <div class="col span-1-of-3">
+                    <!--this element is designed to complement quotes-->
+                    <blockquote>
+                        I was looking for a quick and easy food delivery service in San Franciso. I tried a lot of them and ended up with Omnifood. Best food delivery service in the Bay Area. Keep up the great work!
+                    </blockquote>
+                    <!--this element is for citing the quoter-->
+                    <cite>
+                        <!--image of the quoter-->
+                        <img src="resources/img/customer-3.jpg" alt="Alberto Duncan">
+                        Milton Chapman
+                    </cite>
+                </div>
+            </div>
+        </section>
+        
+        <!--PLANS SECTION***************************************************************************************************************************************************-->
+        
+        <section class="section-plans js--section-plans" id="plans">
+            <div class="row">
+                <h2>Start eating healthy today</h2>
+            </div>
+            <div class="row">
+                <div class="col span-1-of-3">
+                    <div class="plan-box js--wp-4">
+                        <div>
+                            <h3>Premium</h3>
+                            <p class="plan-price">399$ <span>/ month</span></p>
+                            <p class="plan-price-meal">That’s only 13.30$ per meal</p>
+                        </div>
+                        <div>
+                            <ul>
+                                <li><i class="ion-ios-checkmark-empty icon-small"></i>1 meal every day</li>
+                                <li><i class="ion-ios-checkmark-empty icon-small"></i>Order 24/7</li>
+                                <li><i class="ion-ios-checkmark-empty icon-small"></i>Access to newest creations</li>
+                                <li><i class="ion-ios-checkmark-empty icon-small"></i>Free delivery</li>
+                            </ul>
+                        </div>
+                        <div>
+                            <a href="#" class="btn btn-full">Sign up now</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col span-1-of-3">
+                    <div class="plan-box">
+                        <div>
+                            <h3>Pro</h3>
+                            <p class="plan-price">149$ <span>/ month</span></p>
+                            <p class="plan-price-meal">That’s only 14.90$ per meal</p>
+                        </div>
+                        <div>
+                            <ul>
+                                <li><i class="ion-ios-checkmark-empty icon-small"></i>1 meal 10 days/month</li>
+                                <li><i class="ion-ios-checkmark-empty icon-small"></i>Order 24/7</li>
+                                <li><i class="ion-ios-checkmark-empty icon-small"></i>Access to newest creations</li>
+                                <li><i class="ion-ios-checkmark-empty icon-small"></i>Free delivery</li>
+                            </ul>
+                        </div>
+                        <div>
+                            <a href="#" class="btn btn-ghost">Sign up now</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col span-1-of-3">
+                    <div class="plan-box">
+                        <div>
+                            <h3>Starter</h3>
+                            <p class="plan-price">19$ <span>/ meal</span></p>
+                            <!--this special character will add a space in order to take up line space-->
+                            <p class="plan-price-meal">&nbsp;</p>
+                        </div>
+                        <div>
+                            <ul>
+                                <li><i class="ion-ios-checkmark-empty icon-small"></i>1 meal</li>
+                                <li><i class="ion-ios-checkmark-empty icon-small"></i>Order from 8 am to 12 pm</li>
+                                <li><i class="ion-ios-close-empty icon-small"></i></li>
+                                <li><i class="ion-ios-checkmark-empty icon-small"></i>Free delivery</li>
+                            </ul>
+                        </div>
+                        <div>
+                            <a href="#" class="btn btn-ghost">Sign up now</a>
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
+        </section>
+        
+        <!--CONTACT SECTION***************************************************************************************************************************************************-->
+        
+        <section class="section-form">
+            <div class="row">
+                <h2>We're happy to hear from you</h2>
+            </div>
+            <div class="row">
+                <!--when creating a form, it is important to use the form tag-->
+                <form action="#" class="contact-form">
+                    <div class="row">
+                        <div class="col span-1-of-3">
+                            <label for="name">Name</label>
+                        </div>
+                        <div class="col span-2-of-3">
+                            <input type="text" name="name" id="name" placeholder="Your name" required>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col span-1-of-3">
+                            <label for="email">Email</label>
+                        </div>
+                        <div class="col span-2-of-3">
+                            <input type="email" name="email" id="email" placeholder="Your email" required>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col span-1-of-3">
+                            <label for="find-us">How did you find us?</label>
+                        </div>
+                        <div class="col span-2-of-3">
+                            <select name="find-us" id="find-us">
+                                <option value="friends">Friends</option>
+                                <option value="search" selected>Search Engine</option>
+                                <option value="ad">Advertisement</option>
+                                <option value="other">Other</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col span-1-of-3">
+                            <label for="newsletter">Newsletter</label>
+                        </div>
+                        <div class="col span-2-of-3">
+                            <input type="checkbox" name="newsletter" id="newsletter" checked> Yes Please
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col span-1-of-3">
+                            <label>Drop Us A Line</label>
+                        </div>
+                        <div class="col span-2-of-3">
+                            <textarea name="message" placeholder="Your message"></textarea>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col span-1-of-3">
+                            <label>&nbsp;</label>
+                        </div>
+                        <div class="col span-2-of-3">
+                            <input type="submit" name="submit" value="Send it!">
+                        </div>
+                    </div>
+                </form>
+                
+            </div>
+        </section>
+        
+        <!--FOOTER SECTION***************************************************************************************************************************************************-->
+        
+        <footer>
+            <div class="row">
+                <div class="col span-1-of-2">
+                    <ul class="footer-nav">
+                        <li><a href="#">About Us</a></li>
+                        <li><a href="#">Blog</a></li>
+                        <li><a href="#">Press</a></li>
+                        <li><a href="#">iOS App</a></li>
+                        <li><a href="#">Android App</a></li>
+                    </ul>
+                </div>
+                <div class="col span-1-of-2">
+                    <ul class="social-links">
+                        <li><a href="#"><i class="ion-social-facebook"></i></a></li>
+                        <li><a href="#"><i class="ion-social-twitter"></i></a></li>
+                        <li><a href="#"><i class="ion-social-googleplus"></i></a></li>
+                        <li><a href="#"><i class="ion-social-instagram"></i></a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="row">
+                <p>
+                    Copyright &copy; 2021 by Omnifood. All rights reserved.
+                </p>
+            </div>
+        </footer>
+        
+        <!--javascript files-->
+    
+        <!--Jquery script from google hosted libraries. This is the 1x snippet-->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+        <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
+
+        <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
+
+        <script src="https://cdn.jsdelivr.net/npm/selectivizr@1.0.3/selectivizr.min.js"></script>
+        
+        <!--the waypoints plugin-->
+        <script src="vendors/js/jquery.waypoints.min.js"></script>
+        
+        <!--this incorporates the javascript file (script.jss) into the index html file. this is the one we created, and should always be the last one here-->
+        <script src="resources/js/script.js"></script>
+        
+    </body>
+    
+</html>
+
+<!--
+Section 8: Footer
+Title: None
+
+Navigation:
+1. About us
+2. Blog
+3. Press
+4. iOS App
+5. Android App
+
+Also include links to facebook, twitter, google+ and Instagram accounts.
+
+-->
